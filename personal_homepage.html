@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - shaohanxi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #0080ff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px 8px 0 0;
+            margin: -20px -20px 30px -20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            margin: 0 auto 20px auto;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background-color: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-item strong {
+            margin-right: 10px;
+            color: #667eea;
+        }
+        
+        .action-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .action-button:active {
+            transform: translateY(0);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .item-subtitle {
+            color: #667eea;
+            font-style: italic;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .item-date {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            header {
+                padding: 30px 15px;
+                margin: -15px -15px 25px -15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- 将此处的图片链接替换为您的个人照片 -->
+            <img src="https://via.placeholder.com/150" alt="个人照片" class="profile-pic">
+            <h1>shaohanxi</h1>
+            <div class="subtitle">您的职业 / 专业领域</div>
+            <p>这里是您的个人简介，可以简要介绍您的专业背景、技能特长或职业目标。</p>
+            <div style="margin-top: 20px;">
+                <button class="action-button" onclick="location.href='mailto:shaohanxi10001_2026@outlook.com'" style="margin-right: 10px;">📧 发送邮件</button>
+                <button class="action-button" onclick="downloadResume()" style="margin-right: 10px;">📄 下载简历</button>
+                <button class="action-button" onclick="window.open('https://www.github.com/shaohanxi', '_blank')" style="margin-right: 10px;">💻 GitHub</button>
+                <button class="action-button" onclick="window.open('https://www.linkedin.com/in/shaohanxi', '_blank')" style="margin-right: 10px;">👔 LinkedIn</button>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>联系信息</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧</strong> shaohanxi10001_2026@outlook.com
+                </div>
+                <div class="contact-item">
+                    <strong>📱</strong> +86 189-3527-1348
+                </div>
+                <div class="contact-item">
+                    <strong>📍</strong> Jincheng china
+                </div>
+                <div class="contact-item">
+                    <strong>💼</strong> www.github.com/shaohanxi10001
+                </div>
+            </div>
+            <div style="margin-top: 15px; text-align: center;">
+                <button class="action-button" onclick="window.open('https://www.github.com/shaohanxi10001', '_blank')" style="margin: 5px;"> GitHub Profile </button>
+                <button class="action-button" onclick="window.open('https://www.linkedin.com/in/shaohanxi', '_blank')" style="margin: 5px;"> LinkedIn </button>
+                <button class="action-button" onclick="window.open('https://twitter.com/shaohanxi', '_blank')" style="margin: 5px;"> Twitter </button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>技能专长</h2>
+            <div class="skills">
+                <span class="skill-tag">技能 1</span>
+                <span class="skill-tag">技能 2</span>
+                <span class="skill-tag">技能 3</span>
+                <span class="skill-tag">技能 4</span>
+                <span class="skill-tag">技能 5</span>
+                <span class="skill-tag">技能 6</span>
+            </div>
+            <p style="margin-top: 15px;">在这里可以详细介绍您的核心技能、掌握的技术栈或专业能力。</p>
+        </div>
+
+        <div class="section">
+            <h2>工作经历</h2>
+            <div class="experience-item">
+                <div class="item-title">职位名称</div>
+                <div class="item-subtitle">公司名称</div>
+                <div class="item-date">2023年1月 - 2024年12月</div>
+                <p>简要描述您的工作职责、主要成就或项目经验。可以突出您的贡献和取得的成果。</p>
+            </div>
+            <div class="experience-item">
+                <div class="item-title">职位名称</div>
+                <div class="item-subtitle">公司名称</div>
+                <div class="item-date">2021年6月 - 2022年12月</div>
+                <p>简要描述您的工作职责、主要成就或项目经验。可以突出您的贡献和取得的成果。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>项目经验</h2>
+            <div class="project-item">
+                <div class="item-title">项目名称</div>
+                <div class="item-subtitle">项目描述或技术栈</div>
+                <div class="item-date">2024年</div>
+                <p>详细介绍项目背景、您的角色、使用的技术以及项目成果。可以包含项目链接或GitHub地址。</p>
+            </div>
+            <div class="project-item">
+                <div class="item-title">项目名称</div>
+                <div class="item-subtitle">项目描述或技术栈</div>
+                <div class="item-date">2023年</div>
+                <p>详细介绍项目背景、您的角色、使用的技术以及项目成果。可以包含项目链接或GitHub地址。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>教育背景</h2>
+            <div class="experience-item">
+                <div class="item-title">学位名称</div>
+                <div class="item-subtitle">学校名称</div>
+                <div class="item-date">2017年9月 - 2021年6月</div>
+                <p>主修专业：专业名称<br>相关课程：课程1, 课程2, 课程3</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 shaohanxi. 保留所有权利.</p>
+            <p>个人主页 • 联系方式: shaohanxi10001_2026@outlook.com</p>
+        </footer>
+    </div>
+    
+    <script>
+        function downloadResume() {
+            alert('简历下载功能 - 您可以在此处添加实际的简历下载功能');
+            // 这里可以替换成实际的简历PDF文件下载
+            // window.open('resume.pdf', '_blank');
+        }
+        
+        // 为技能标签添加点击效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillTags = document.querySelectorAll('.skill-tag');
+            skillTags.forEach(tag => {
+                tag.style.cursor = 'pointer';
+                tag.addEventListener('click', function() {
+                    alert(`您点击了技能: ${this.textContent}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
