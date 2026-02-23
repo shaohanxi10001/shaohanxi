@@ -222,30 +222,14 @@
         <div class="section">
             <h2>技能专长</h2>
             <div class="skills">
-                <span class="skill-tag" onclick="window.open('https://www.bilibili.com', '_blank')" >B站主页</span>
-                <span class="skill-tag" data-href="https://www.minecraft.net">卡牌效果</span>
+                <span class="skill-tag" onclick="window.open('https://space.bilibili.com/3546794403301826?spm_id_from=333.337.search-card.all.click', '_blank')" >B站主页</span>
+                <span class="skill-tag" onclick="window.open('https://www.minecraft.net', '_blank')">MC官网</span>
                 <span class="skill-tag" data-href="https://666.com">前端开发</span>
                 <span class="skill-tag" data-href="https://www.kardsgame.com/decks">卡牌策略</span>
                 <span class="skill-tag" data-href="https://www.kardsgame.com/cards">卡牌效果</span>
                 <span class="skill-tag" data-href="https://你的博客.com">前端开发</span>
             </div>
             <p style="margin-top: 15px;">在这里可以详细介绍您的核心技能、掌握的技术栈或专业能力。</p>
-        </div>
-
-        <div class="section">
-            <h2>工作经历</h2>
-            <div class="experience-item">
-                <div class="item-title">职位名称</div>
-                <div class="item-subtitle">公司名称</div>
-                <div class="item-date">2023年1月 - 2024年12月</div>
-                <p>简要描述您的工作职责、主要成就或项目经验。可以突出您的贡献和取得的成果。</p>
-            </div>
-            <div class="experience-item">
-                <div class="item-title">职位名称</div>
-                <div class="item-subtitle">公司名称</div>
-                <div class="item-date">2021年6月 - 2022年12月</div>
-                <p>简要描述您的工作职责、主要成就或项目经验。可以突出您的贡献和取得的成果。</p>
-            </div>
         </div>
 
         <div class="section">
@@ -286,14 +270,6 @@
             // 这里可以替换成实际的简历PDF文件下载
             // window.open('resume.pdf', '_blank');
         }
-        
-        // 为技能标签添加点击效果
-        document.addEventListener('DOMContentLoaded', function() {
-            const skillTags = document.querySelectorAll('.skill-tag');
-            skillTags.forEach(tag => {
-                tag.style.cursor = 'pointer';
-                tag.addEventListener('click', function() {
-                    alert(`您点击了技能: ${this.textContent}`);
                 });
             });
         });
